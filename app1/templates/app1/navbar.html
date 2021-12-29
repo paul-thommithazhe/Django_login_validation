@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse navbar-dark bg-dark">
+   <div class="container">
+       <div class="navbar-header">
+           <a href="#" class="navbar-brand">WELCOME</a>
+       </div>
+       <div class="d-flex ">
+           {% if user %}
+                <a class="btn btn-danger" href="/logout">Logout</a>
+            {% else %}
+                <a class="btn btn-success" href="/">Login</a>
+                 <span>space__</span>
+                <a class="btn btn-primary" href="/register">Register</a>
+            {% endif %}
+       </div>
+   </div>
+  </nav>

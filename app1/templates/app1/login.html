@@ -1,0 +1,30 @@
+{% extends "app1/index.html" %}
+
+{% block content %}
+
+{% load crispy_forms_tags %}
+
+
+<div style="margin-top: 20vh; width: 30%;
+margin-left: 74vh;" class=" card card-body bg-light align-items-center">
+
+    
+    <div>
+        {{err}}
+    </div>
+    
+   
+    <form method="post" autocomplete="off" action="/">
+        {% csrf_token %}
+        {{form|crispy}}
+        <div class="mt-3">
+
+            <button type="submit" class="btn btn-success ">Login</button>
+            <span ><a class="btn btn-primary" href="/register">signup</a></span>
+        </div>
+    </form>
+
+
+</div>
+
+{% endblock %}
